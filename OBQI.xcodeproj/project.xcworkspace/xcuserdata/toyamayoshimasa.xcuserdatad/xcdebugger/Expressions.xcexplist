@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DetailAssInputList.viewDidLoad() -&gt; ():DetailAssInputList.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "appDelegate.SelectedAssHD[&quot;AssKB&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailICSelect.clickAddIC(Any) -&gt; ():DetailICSelect.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppCommon.loadVersion() -&gt; ():AppCommon.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "test">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppCommon.changeDetailView(storyBoardID : String!) -&gt; ():AppCommon.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "storyboard">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppCommon.postSynchronous(String!, params : [String : AnyObject]) -&gt; (result : String?, errCode : String?):AppCommon.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(req.httpBody)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailOutcome.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:DetailOutcome.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "appDelegate.SelectedOutcom[&quot;SelfRecordKB&quot;].asInt">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppCommon.getSynchronous(String!) -&gt; String?:AppCommon.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "NSUUID().uuidString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppCommon.putSynchronous(String!, params : [String : AnyObject]) -&gt; String?:AppCommon.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "appDelegate.LoginInfo![&quot;LoginSessionKey&quot;].asString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EpisodeCommon.regEpisodeText(episodeID : Int!, text : String!) -&gt; ():EpisodeCommon.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailAssPhoto.imagePickerController(UIImagePickerController, didFinishPickingMediaWithInfo : [String : Any]) -&gt; ():DetailAssPhoto.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DetailEpisodeRestart.clickChangeStatus(AnyObject) -&gt; ():DetailEpisodeRestart.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(describing: appDelegate.SelectedEpisodeID!)">
+            </PersistentString>
+            <PersistentString
+               value = "appDelegate.EpisodeRestartDate">
+            </PersistentString>
+            <PersistentString
+               value = "AppConst.EpisodeKbn.RESTART.rawValue">
+            </PersistentString>
+            <PersistentString
+               value = "appDelegate.SelectedEpisodeID">
+            </PersistentString>
+            <PersistentString
+               value = "appDelegate.EpisodeRestartReason">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AssCommon.getPhotoAssessmentList() -&gt; JSON?:AssCommon.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "res.result">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailEpisodeTextInput.viewDidLoad() -&gt; ():DetailEpisodeTextInput.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "firstValue!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailICSelect.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:DetailICSelect.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "appDelegate.MstInformedConsentList?[0][&quot;ICName&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailEpisode.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:DetailEpisode.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "outcomeItems[0][&quot;OutcomeDateTime&quot;].asString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MasterAssessmentMenu.isAssessmentInput() -&gt; Bool:MasterAssessmentMenu.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "appDelegate.InputAssList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailAssDate.viewDidLoad() -&gt; ():DetailAssDate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "firstValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JSON.asDate.getter:JSON.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailICNameInput.viewDidLoad() -&gt; ():DetailICNameInput.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "appDelegate.SelectedIC[&quot;ICName&quot;].asString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailAssPhoto.viewWillAppear(Bool) -&gt; ():DetailAssPhoto.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "trn[&quot;SEQNO&quot;].asInt">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailEpisode.viewDidLoad() -&gt; ():DetailEpisode.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "episodeKbn">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

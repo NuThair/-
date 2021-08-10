@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mZf-s1-NbQ">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--電子カルテ連携-->
+        <scene sceneID="zAM-Q7-tIS">
+            <objects>
+                <tableViewController id="mZf-s1-NbQ" customClass="MasterKarteMenuList" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aGQ-6A-3hx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="roa-Uf-bDi">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="roa-Uf-bDi" id="1uS-D7-i7K">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mZf-s1-NbQ" id="hkQ-sN-kqf"/>
+                            <outlet property="delegate" destination="mZf-s1-NbQ" id="Bd8-oV-ZHs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="電子カルテ連携" id="vT6-ky-c0O"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="hRj-7x-JHX" kind="show" identifier="SegueMasterKarteReceptionList" id="Btd-2R-Yhk"/>
+                        <segue destination="Jg9-Jd-8FW" kind="show" identifier="SegueMasterKarteTreatmentList" id="ff1-UH-2bW"/>
+                        <segue destination="9gy-hP-mkV" kind="showDetail" identifier="SegueDetailKarteHistoryList" id="5FC-5K-TDo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5g-Yi-ew1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1618" y="252"/>
+        </scene>
+        <!--受付日一覧-->
+        <scene sceneID="Nsv-p8-u0s">
+            <objects>
+                <tableViewController id="hRj-7x-JHX" customClass="MasterKarteReceptionList" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hYp-lT-XkB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="n5b-Vw-GAg">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n5b-Vw-GAg" id="aG0-1m-qfc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hRj-7x-JHX" id="SVc-jh-ehf"/>
+                            <outlet property="delegate" destination="hRj-7x-JHX" id="rQB-mi-IlW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="受付日一覧" id="CxA-kA-n60"/>
+                    <connections>
+                        <segue destination="c7f-ar-x2x" kind="showDetail" identifier="SegueDetailKarteMenuList" id="jpd-5c-0p2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KoL-JZ-P3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674" y="-1221"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uX0-5p-foS">
+            <objects>
+                <navigationController id="c7f-ar-x2x" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1iN-Nb-aU9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MFY-sC-jZE" kind="relationship" relationship="rootViewController" id="Igv-Af-I5X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mnw-Ew-3eN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="-1221"/>
+        </scene>
+        <!--SOAP連携-->
+        <scene sceneID="wFz-qa-Web">
+            <objects>
+                <tableViewController id="MFY-sC-jZE" customClass="DetailKarteSOAPCooperation" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="11c-Z0-o4R">
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MAi-Ne-fWg">
+                                <rect key="frame" x="0.0" y="28" width="703" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MAi-Ne-fWg" id="AYl-vQ-GXc">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MFY-sC-jZE" id="xaF-BQ-3Nb"/>
+                            <outlet property="delegate" destination="MFY-sC-jZE" id="edP-f6-0bm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SOAP連携" id="aBe-JR-f1C">
+                        <barButtonItem key="rightBarButtonItem" title="連携" id="BBH-8I-Oba">
+                            <connections>
+                                <action selector="clickCooperation:" destination="MFY-sC-jZE" id="DyB-KW-S2R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="sHf-ky-50b" kind="show" identifier="SegueDetailKarteSOASelect" id="hWF-vn-JyN"/>
+                        <segue destination="cWd-Ak-F0M" kind="show" identifier="SegueDetailKartePlanSelect" id="hYo-Xz-TaI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yD0-kh-usL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="-1221"/>
+        </scene>
+        <!--SOA-->
+        <scene sceneID="S6i-Ne-QVY">
+            <objects>
+                <tableViewController id="sHf-ky-50b" customClass="DetailKarteSelectSOA" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zPV-h4-dcY">
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aZ2-yC-Zt2">
+                                <rect key="frame" x="0.0" y="28" width="703" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aZ2-yC-Zt2" id="qOB-Ru-VDP">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sHf-ky-50b" id="AaY-If-xZE"/>
+                            <outlet property="delegate" destination="sHf-ky-50b" id="sLn-jb-Yk8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SOA" id="CEo-vU-zCR">
+                        <rightBarButtonItems>
+                            <barButtonItem title="一括選択" id="Pg0-7I-nIo">
+                                <connections>
+                                    <action selector="ClickAllSelect:" destination="sHf-ky-50b" id="sIF-c3-kAB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="一括解除" id="5uT-55-dqD">
+                                <color key="tintColor" red="0.92549020049999997" green="0.23529411850000001" blue="0.1019607857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="ClickAllDeSelect:" destination="sHf-ky-50b" id="HLX-bF-3aU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myNaviBar" destination="CEo-vU-zCR" id="Hq4-wz-ED3"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCW-YP-qCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="-2263"/>
+        </scene>
+        <!--P-->
+        <scene sceneID="XAK-iG-Yta">
+            <objects>
+                <tableViewController id="cWd-Ak-F0M" customClass="DetailKarteSelectPlan" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9rc-jy-mpz">
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vVj-v1-fiI">
+                                <rect key="frame" x="0.0" y="28" width="703" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vVj-v1-fiI" id="1Gf-MK-7oh">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cWd-Ak-F0M" id="Kgp-t1-V76"/>
+                            <outlet property="delegate" destination="cWd-Ak-F0M" id="iEw-UI-fPf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="P" id="C5f-um-3ZE">
+                        <barButtonItem key="rightBarButtonItem" title="追加" id="kUs-HS-l5C">
+                            <connections>
+                                <action selector="ClickAdd:" destination="cWd-Ak-F0M" id="vM5-2w-ayC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myNaviBar" destination="C5f-um-3ZE" id="uSB-7f-bre"/>
+                        <segue destination="ieb-qV-gNK" kind="show" identifier="SegueDetailKartePlanDTSelect" id="HeU-77-q8n"/>
+                        <segue destination="qEz-hp-61r" kind="presentation" identifier="SegueModalKartePlanList" modalPresentationStyle="formSheet" id="gOC-wS-AF2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tui-ck-kbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="-1221"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dq2-4Y-hUX">
+            <objects>
+                <navigationController id="qEz-hp-61r" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ONQ-Ne-2Nt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vN9-3h-Ai9" kind="relationship" relationship="rootViewController" id="Yda-xH-sX6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uej-SM-a41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2532" y="-1221"/>
+        </scene>
+        <!--介入計画一覧-->
+        <scene sceneID="meO-vB-dAd">
+            <objects>
+                <tableViewController id="vN9-3h-Ai9" customClass="ModalKartePlanListSelect" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hAn-dc-OCE">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3RS-kG-Pa5">
+                                <rect key="frame" x="0.0" y="28" width="540" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3RS-kG-Pa5" id="Z0d-K8-1w9">
+                                    <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vN9-3h-Ai9" id="qAa-U5-Wmj"/>
+                            <outlet property="delegate" destination="vN9-3h-Ai9" id="BuY-Jf-WE4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="介入計画一覧" id="dbs-uZ-NNC">
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="7Hw-MZ-Y7P">
+                            <color key="tintColor" red="0.92549020049999997" green="0.23529411850000001" blue="0.1019607857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="ClickCancel:" destination="vN9-3h-Ai9" id="Kkr-4A-0ho"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="確定" id="yH4-Xs-med">
+                            <connections>
+                                <action selector="ClickConfirm:" destination="vN9-3h-Ai9" id="O2g-pG-jP5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="N8l-8g-LmT" kind="show" identifier="SegueDetailKartePlanDTSelect" id="ipY-I8-aFg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Bd-Gg-RMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3038" y="-1221"/>
+        </scene>
+        <!--介入計画詳細選択-->
+        <scene sceneID="RyT-O5-t22">
+            <objects>
+                <tableViewController id="N8l-8g-LmT" customClass="ModalKartePlanDTListSelect" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8xz-3Z-BkN">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1Sj-Yn-5Iu">
+                                <rect key="frame" x="0.0" y="28" width="540" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Sj-Yn-5Iu" id="vLa-nW-Why">
+                                    <rect key="frame" x="0.0" y="0.0" width="540" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="N8l-8g-LmT" id="sbe-9w-oGC"/>
+                            <outlet property="delegate" destination="N8l-8g-LmT" id="fq2-GD-0ZA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="介入計画詳細選択" id="sxU-6e-6Qd">
+                        <rightBarButtonItems>
+                            <barButtonItem title="一括選択" id="alq-KB-jDY">
+                                <connections>
+                                    <action selector="ClickAllSelect:" destination="N8l-8g-LmT" id="rZp-aG-uDZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="一括解除" id="SVn-4m-v6k">
+                                <color key="tintColor" red="0.92549020049999997" green="0.23529411850000001" blue="0.1019607857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="ClickAllDeSelect:" destination="N8l-8g-LmT" id="o40-BX-XSB"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myNaviBar" destination="sxU-6e-6Qd" id="AnO-Zu-vE2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lB0-rL-Snz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3577" y="-1221"/>
+        </scene>
+        <!--介入計画連携対象選択-->
+        <scene sceneID="mQ8-54-iLY">
+            <objects>
+                <tableViewController id="ieb-qV-gNK" customClass="DetailKartePlanDTListSelectEdit" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RJB-JC-fJu">
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UD2-il-nJf">
+                                <rect key="frame" x="0.0" y="28" width="703" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UD2-il-nJf" id="ZdG-Ff-9jK">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ieb-qV-gNK" id="g29-u7-j1z"/>
+                            <outlet property="delegate" destination="ieb-qV-gNK" id="AsV-Eo-nJH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="介入計画連携対象選択" id="14O-X8-N7H">
+                        <rightBarButtonItems>
+                            <barButtonItem title="一括選択" id="uhH-wN-hN7">
+                                <connections>
+                                    <action selector="ClickAllSelect:" destination="ieb-qV-gNK" id="gIz-XT-zjG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="一括解除" id="cgg-R2-Giw">
+                                <color key="tintColor" red="0.92549020049999997" green="0.23529411850000001" blue="0.1019607857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="ClickAllDeSelect:" destination="ieb-qV-gNK" id="TvB-8B-Xdn"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myNaviBar" destination="14O-X8-N7H" id="3mA-rg-Q83"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONP-97-heZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2532" y="-462"/>
+        </scene>
+        <!--実施日一覧-->
+        <scene sceneID="LHL-2h-6ZV">
+            <objects>
+                <tableViewController id="Jg9-Jd-8FW" customClass="MasterKarteTreatmentList" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="knJ-xJ-cox">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2pj-B0-3ML">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2pj-B0-3ML" id="QPI-5I-L6A">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jg9-Jd-8FW" id="JBH-xp-2ne"/>
+                            <outlet property="delegate" destination="Jg9-Jd-8FW" id="YtL-ZQ-qfX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="実施日一覧" id="9Lg-KR-hKd"/>
+                    <connections>
+                        <segue destination="CfV-V0-AdR" kind="showDetail" identifier="SegueDetailKarteOrderCooperation" id="OnY-EB-KPZ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jo7-RJ-1ue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674" y="252"/>
+        </scene>
+        <!--オーダー連携-->
+        <scene sceneID="r8p-bS-Mpa">
+            <objects>
+                <tableViewController id="bYC-4B-inr" customClass="DetailKarteOrderCooperation" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UJ9-gC-vHd">
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="o8M-5r-aqV">
+                                <rect key="frame" x="0.0" y="28" width="703" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8M-5r-aqV" id="4Jt-So-OGK">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bYC-4B-inr" id="LLy-mp-1rM"/>
+                            <outlet property="delegate" destination="bYC-4B-inr" id="gEE-H4-d9l"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="オーダー連携" id="iIx-hV-eTM">
+                        <barButtonItem key="leftBarButtonItem" title="編集モードにする" id="djf-3J-RqK">
+                            <connections>
+                                <action selector="toggleEditMode:" destination="bYC-4B-inr" id="nZ5-2v-gnq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="連携" id="6iN-uN-sA9">
+                            <connections>
+                                <action selector="clickCooperation:" destination="bYC-4B-inr" id="xqa-Pv-v0U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myNaviBar" destination="iIx-hV-eTM" id="7mf-Cc-fK3"/>
+                        <segue destination="FyR-bj-Otn" kind="show" identifier="SegueDetailKarteOrderSelect" id="eUg-q2-fsH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s87-Gu-Rw4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="252"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="df5-Ec-Ux8">
+            <objects>
+                <navigationController id="CfV-V0-AdR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="obj-GS-kd9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bYC-4B-inr" kind="relationship" relationship="rootViewController" id="dtj-fh-2OL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jL-SJ-apy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="252"/>
+        </scene>
+        <!--Order-->
+        <scene sceneID="5fV-dS-bO3">
+            <objects>
+                <tableViewController id="FyR-bj-Otn" customClass="DetailKarteOrderSelect" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="C9f-ul-hPc">
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hJD-PV-a4O">
+                                <rect key="frame" x="0.0" y="28" width="703" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hJD-PV-a4O" id="hKn-z0-8RB">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FyR-bj-Otn" id="c0b-Rm-uDq"/>
+                            <outlet property="delegate" destination="FyR-bj-Otn" id="Ozn-Dv-dOG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Order" id="179-O6-vy4">
+                        <rightBarButtonItems>
+                            <barButtonItem title="一括選択" id="yDq-ce-Mn1">
+                                <connections>
+                                    <action selector="ClickAllSelect:" destination="FyR-bj-Otn" id="Abc-jG-V6Q"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="一括解除" id="DNw-sx-5Rm">
+                                <color key="tintColor" red="0.92549020049999997" green="0.23529411850000001" blue="0.1019607857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="ClickAllDeSelect:" destination="FyR-bj-Otn" id="au2-yE-7AA"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="StX-Rj-Bd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="252"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="byb-7W-aA1">
+            <objects>
+                <navigationController id="9gy-hP-mkV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vtr-oA-4B6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vrw-Aa-rhS" kind="relationship" relationship="rootViewController" id="gBA-FI-AP9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i1h-gs-PoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674" y="1874"/>
+        </scene>
+        <!--連携履歴一覧-->
+        <scene sceneID="Zn7-ap-hbo">
+            <objects>
+                <tableViewController id="Vrw-Aa-rhS" customClass="DetailKarteHistoryList" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dig-xf-DW1">
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" id="gpP-5m-S9y" customClass="KarteHistoryCustomCell" customModule="OBQI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="703.5" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gpP-5m-S9y" id="RG7-ek-Rq3">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOE-TH-5xt">
+                                            <rect key="frame" x="24" y="4" width="330" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="330" id="0YS-0u-LtQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFv-6k-XEM">
+                                            <rect key="frame" x="24" y="24" width="330" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="330" id="SI1-ty-wAK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsX-kl-hzk">
+                                            <rect key="frame" x="365" y="11" width="330" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="330" id="rp3-xZ-W3W"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GOE-TH-5xt" firstAttribute="leading" secondItem="RG7-ek-Rq3" secondAttribute="leadingMargin" constant="16" id="1jj-OR-BK8"/>
+                                        <constraint firstItem="GOE-TH-5xt" firstAttribute="top" secondItem="RG7-ek-Rq3" secondAttribute="top" constant="4" id="4PL-2k-kez"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tsX-kl-hzk" secondAttribute="trailing" id="ACY-QQ-Fc2"/>
+                                        <constraint firstItem="tsX-kl-hzk" firstAttribute="centerY" secondItem="RG7-ek-Rq3" secondAttribute="centerY" id="DjS-NY-q1U"/>
+                                        <constraint firstAttribute="bottom" secondItem="qFv-6k-XEM" secondAttribute="bottom" constant="4" id="SX2-CT-zzU"/>
+                                        <constraint firstItem="qFv-6k-XEM" firstAttribute="leading" secondItem="RG7-ek-Rq3" secondAttribute="leadingMargin" constant="16" id="f5E-wp-0T8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="tsX-kl-hzk" id="mIU-un-1gB"/>
+                                    <outlet property="mainLabel" destination="GOE-TH-5xt" id="XjC-Ko-fTV"/>
+                                    <outlet property="subLabel" destination="qFv-6k-XEM" id="eTy-sV-5cN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vrw-Aa-rhS" id="bK3-3T-PBA"/>
+                            <outlet property="delegate" destination="Vrw-Aa-rhS" id="zBI-w8-D71"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="連携履歴一覧" id="tHh-9B-uxM"/>
+                    <connections>
+                        <segue destination="LCG-uI-d4E" kind="show" identifier="SegueDetailKarteSOAPHistory" id="Fcn-Ec-8hT"/>
+                        <segue destination="60z-QU-qVl" kind="show" identifier="SegueDetailKarteOrderHistory" id="XiP-O5-0NZ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVX-Vg-XAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="1875"/>
+        </scene>
+        <!--SOAP連携履歴-->
+        <scene sceneID="Eo3-Au-7y5">
+            <objects>
+                <tableViewController id="LCG-uI-d4E" customClass="DetailKarteSOAPHistory" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GS6-2J-t3O">
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="y3R-CV-XUB">
+                                <rect key="frame" x="0.0" y="28" width="703" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y3R-CV-XUB" id="V9y-bo-LCD">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LCG-uI-d4E" id="t7v-yv-ry6"/>
+                            <outlet property="delegate" destination="LCG-uI-d4E" id="K0D-xb-Jlk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SOAP連携履歴" id="ztg-l2-ZXA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cR2-dX-goU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="1875"/>
+        </scene>
+        <!--オーダー連携履歴-->
+        <scene sceneID="O7f-tA-4j4">
+            <objects>
+                <tableViewController id="60z-QU-qVl" customClass="DetailKarteOrderHistory" customModule="OBQI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z3h-ht-hWw">
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hfj-0T-c7G">
+                            <rect key="frame" x="0.0" y="0.0" width="703.5" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pf1-4t-DX4">
+                                <rect key="frame" x="0.0" y="72" width="703.5" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pf1-4t-DX4" id="wEf-9s-aUC">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="60z-QU-qVl" id="GkR-xi-6zq"/>
+                            <outlet property="delegate" destination="60z-QU-qVl" id="Pen-rd-YBt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="オーダー連携履歴" id="xcM-fP-NOt"/>
+                    <connections>
+                        <outlet property="result" destination="Hfj-0T-c7G" id="6dQ-Kn-4aU"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyz-ku-37l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="2839"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ygi-ix-G8Y">
+            <objects>
+                <navigationController storyboardIdentifier="KarteLinkDetailStartView" id="xfm-3Z-RYA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kbw-c0-2u0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Edw-N2-qLv" kind="relationship" relationship="rootViewController" id="hSC-Gp-1Zz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqj-Eb-jnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1618" y="4151"/>
+        </scene>
+        <!--電子カルテ連携-->
+        <scene sceneID="xuZ-q6-2yl">
+            <objects>
+                <viewController id="Edw-N2-qLv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kkf-A5-UaJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="VF0-6Z-UYn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vey-Vb-pxT">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="電子カルテ連携" id="Dyp-Cf-N3M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbZ-75-r35" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871" y="4151"/>
+        </scene>
+    </scenes>
+</document>
