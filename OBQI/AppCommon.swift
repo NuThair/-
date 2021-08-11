@@ -70,7 +70,6 @@ class AppCommon: UIViewController , UIAlertViewDelegate, XMLParserDelegate {
     }
     func isNewVersion() -> Bool! {
         let version: String! = (Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String)
-      //  print("app -version:\(version ?? <#default value#>)")
         let info = version.split(omittingEmptySubsequences: false){$0 == "."}.map { String($0) }
         
         let nowMa  = info[0] // foo
@@ -90,7 +89,7 @@ class AppCommon: UIViewController , UIAlertViewDelegate, XMLParserDelegate {
     func loadVersion() {
         appDelegate.loadVersion = false
         let version: String! = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
-        //print("app -version:\(version ?? <#default value#>)")
+        //print("app -version:\(version ?? default value )")
         let info = version.split(omittingEmptySubsequences: false){$0 == "."}.map { String($0) }
         let nowMa  = info[0] // foo
         let nowMi  = info[1] // *
